@@ -10377,3 +10377,71 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  display: flex;
+  height: 100%;
+}
+
+.dashboard__sidebar {
+  width: 280px;
+  height: 100%;
+  background: #dee2e6;
+  transition: 0.3s;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% + 45px));
+}
+
+.dashboard__sidebar-toggle,
+.dashboard__sidebar-content {
+  padding: 15px;
+}
+
+.dashboard__sidebar-toggle {
+  background: black;
+}
+
+.dashboard__sidebar-toggle-open,
+.dashboard__sidebar-toggle-close {
+  color: white;
+}
+
+.dashboard__sidebar-toggle-open {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dashboard__sidebar-toggle-close {
+  display: none;
+}
+
+.dashboard__sidebar-active {
+  transform: unset;
+  overflow: auto;
+}
+
+.dashboard__sidebar-active .dashboard__sidebar-toggle-open {
+  display: none;
+}
+
+.dashboard__sidebar-active .dashboard__sidebar-toggle-close {
+  display: block;
+}
+
+.dashboard__content {
+  flex: auto;
+}
+

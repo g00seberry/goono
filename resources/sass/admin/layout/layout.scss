@@ -1,0 +1,56 @@
+.dashboard{
+    display: flex;
+    height: 100%;
+    &__sidebar{
+        width: 280px;
+        height: 100%;
+        background: $gray-300;
+        transition: $main-transition;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(calc(-100% + 45px));
+
+        &-toggle,
+        &-content{
+            padding: 15px;
+        }
+
+        &-toggle {
+            background:black ;
+        }
+
+        &-toggle-open,
+        &-toggle-close{
+            color: white;
+        }
+        &-toggle-open
+        {
+            display: flex;
+            justify-content: flex-end;
+        }
+        &-toggle-close
+        {
+            display: none;
+        }
+        &-active
+        {
+            transform: unset;
+            overflow: auto;
+
+            & .dashboard__sidebar-toggle-open
+            {
+                display: none;
+            }
+            & .dashboard__sidebar-toggle-close
+            {
+                display: block;
+            }
+
+        }
+    }
+    &__content{
+        flex: auto;
+    }
+}

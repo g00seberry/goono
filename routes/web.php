@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+
+Route::prefix('dashboard')->group(function (){
+    Route::get('/','Admin\DashboardController@index');
+});
